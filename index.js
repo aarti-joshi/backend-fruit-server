@@ -1,9 +1,11 @@
 // Importing Express:
+require('dotenv').config()
 const express = require('express')
 // Creating our server by calling Express:
 const app = express()
 // Port has to be above 1024
-const port = 3000
+const port = process.env.PORT;
+//
 
 const cors = require('cors');
 const fruits = require('./fruits.json');
